@@ -1,0 +1,74 @@
+<!-- SECTION 11: Contact -->
+<section id="contact">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Get In Touch</span>
+            <h2 class="section-title">Let's <span class="gradient-text">Talk</span></h2>
+            <div class="section-divider"></div>
+        </div>
+        
+        <div class="contact-wrapper">
+            <div class="contact-text reveal delay-1">
+                <div class="research-statement-box" style="margin-bottom: 2rem;">
+                    <h3><i class="fas fa-search" style="color: var(--primary-color);"></i> Seeking Research Opportunities</h3>
+                    <p style="font-weight: 600; color: var(--text-primary);">Open to MSc/PhD Opportunities in AI & Machine Learning</p>
+                    <p style="font-size: 0.95rem; margin-top: 0.5rem;">I am interested in pursuing advanced research in Artificial Intelligence and Machine Learning, particularly in Graph Neural Networks, Hypergraph Learning, Deep Learning, Computer Vision, NLP, and intelligent AI systems.</p>
+                </div>
+
+                <h3>Open for Collaboration</h3>
+                <p>{{ data.contact.text }}</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:{{ data.identity.email }}">{{ data.identity.email }}</a>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>{{ data.identity.location }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form reveal delay-2">
+                <form method="POST" action="{{ url_for('main.contact') }}#contact">
+                    {{ form.hidden_tag() }}
+                    
+                    <div class="form-group">
+                        {{ form.name.label }}
+                        {{ form.name(class="form-control", placeholder="Your Name") }}
+                        {% for error in form.name.errors %}
+                            <span class="form-error-text"><i class="fas fa-exclamation-circle"></i> {{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.email.label }}
+                        {{ form.email(class="form-control", placeholder="your.email@example.com") }}
+                        {% for error in form.email.errors %}
+                            <span class="form-error-text"><i class="fas fa-exclamation-circle"></i> {{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.message.label }}
+                        {{ form.message(class="form-control", placeholder="How can we collaborate?", rows=5) }}
+                        {% for error in form.message.errors %}
+                            <span class="form-error-text"><i class="fas fa-exclamation-circle"></i> {{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

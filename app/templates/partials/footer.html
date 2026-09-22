@@ -1,0 +1,38 @@
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Brand -->
+            <div class="footer-brand">
+                <div class="footer-logo">{{ data.identity.name }}</div>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">AI/ML Researcher & Software Engineer</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h4 class="footer-heading">Quick Links</h4>
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#projects">Selected Works</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <!-- Socials -->
+            <div class="footer-links">
+                <h4 class="footer-heading">Connect</h4>
+                <a href="mailto:{{ data.identity.email }}"><i class="fas fa-envelope"></i> Email</a>
+                <a href="{{ data.identity.social.linkedin }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="{{ data.identity.social.github }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                <a href="{{ data.identity.social.researchgate }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-researchgate"></i> ResearchGate</a>
+                <a href="{{ data.identity.social.orcid }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i> ORCID</a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2026</span> {{ data.identity.name }}. All rights reserved.</p>
+            <p>Built with <i class="fas fa-heart" style="color:#ef4444;"></i> &amp; Flask</p>
+        </div>
+    </div>
+</footer>

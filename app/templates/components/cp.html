@@ -1,0 +1,22 @@
+<!-- SECTION 10: Problem Solving -->
+<section id="problem-solving" class="section-alt">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Competitive Programming</span>
+            <h2 class="section-title">Problem <span class="gradient-text">Solving</span></h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+            {% for platform in data.cp %}
+            <div class="card reveal delay-{{ loop.index }}">
+                <div class="card-body" style="text-align: center; padding-top: 2rem;">
+                    <i class="{{ platform.icon }} card-icon" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                    <h3 class="card-title">{{ platform.platform }}</h3>
+                    <p class="card-description">{{ platform.rating }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

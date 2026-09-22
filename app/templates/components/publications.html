@@ -1,0 +1,31 @@
+<!-- SECTION 05: Publications -->
+<section id="publications">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Contributions</span>
+            <h2 class="section-title">Academic <span class="gradient-text">Publications</span></h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="cards-grid">
+            {% for pub in data.publications %}
+            <div class="card reveal delay-{{ loop.index }}">
+                <div class="card-header">
+                    <i class="card-icon fas fa-file-contract"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">{{ pub.title }}</h3>
+                    <p class="card-description"><strong>Venue:</strong> {{ pub.venue }} ({{ pub.date }})</p>
+                    <p class="card-description" style="margin-bottom: 0.5rem;"><strong>Area:</strong> {{ pub.area }}</p>
+                    <p class="card-description"><strong>DOI:</strong> <a href="{{ pub.link }}" target="_blank">{{ pub.doi }}</a></p>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ pub.link }}" target="_blank" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.9rem;">
+                        <i class="fas fa-external-link-alt"></i> View Paper
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

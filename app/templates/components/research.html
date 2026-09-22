@@ -1,0 +1,68 @@
+<!-- SECTION 04: Research -->
+<section id="research" class="section-alt">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Expertise</span>
+            <h2 class="section-title">Research <span class="gradient-text">Focus</span></h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <!-- Major Research Project -->
+        <div class="reveal delay-1" style="margin-bottom: var(--space-xl);">
+            <div class="card research-hero-card">
+                <div class="card-body">
+                    <span class="section-label">Featured Undergraduate Research</span>
+                    <h3 class="card-title thesis-title">"{{ data.thesis.title }}"</h3>
+                    <p class="thesis-model">Model: {{ data.thesis.model }}</p>
+                    
+                    <div class="pipeline-container">
+                        <div class="pipeline-title">Research Pipeline</div>
+                        <div class="pipeline-flow">
+                            {% for step in data.thesis.pipeline %}
+                            <div class="pipeline-step">{{ step }}</div>
+                            {% if not loop.last %}<div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>{% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="tech-stack" style="margin-top: 1.5rem;">
+                        {% for highlight in data.thesis.highlights %}
+                        <span class="tech-tag">{{ highlight }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Research Areas Grid -->
+        <div class="cards-grid">
+            <div class="card reveal delay-1">
+                <div class="card-header">
+                    <i class="card-icon fas fa-project-diagram"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Graph Learning</h3>
+                    <p class="card-description">Specializing in Graph Neural Networks (GNN) and Hypergraph Neural Networks (HGNN) for complex relational data.</p>
+                </div>
+            </div>
+            <div class="card reveal delay-2">
+                <div class="card-header">
+                    <i class="card-icon fas fa-brain"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Core AI/ML</h3>
+                    <p class="card-description">Deep Learning, Machine Learning, Computer Vision, and Natural Language Processing methodologies.</p>
+                </div>
+            </div>
+            <div class="card reveal delay-3">
+                <div class="card-header">
+                    <i class="card-icon fas fa-chart-bar"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Applied AI & Analytics</h3>
+                    <p class="card-description">Data Analytics, Explainable AI, Class-Imbalanced Learning, Educational Data Mining, Medical Image Analysis, and Agentic AI.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

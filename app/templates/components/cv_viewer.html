@@ -1,0 +1,29 @@
+<!-- CV Viewer Modal -->
+<div id="cv-modal" class="cv-modal" aria-hidden="true" role="dialog">
+    <div class="cv-modal-overlay" onclick="closeCvViewer()"></div>
+    <div class="cv-modal-content">
+        <div class="cv-modal-header">
+            <h3><i class="fas fa-file-pdf" style="color: #ef4444;"></i> Kamrun Nesa — Resume</h3>
+            <div class="cv-modal-actions">
+                <a href="{{ url_for('static', filename=data.identity.cv_path) }}" download class="btn btn-primary btn-sm">
+                    <i class="fas fa-download"></i> Download
+                </a>
+                <button class="cv-modal-close" onclick="closeCvViewer()" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="cv-modal-body">
+            <!-- PDF Viewer object -->
+            <object data="{{ url_for('static', filename=data.identity.cv_path) }}#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="100%">
+                <!-- Fallback if PDF plugin isn't supported -->
+                <div class="pdf-fallback">
+                    <p>It appears your browser doesn't support embedded PDFs.</p>
+                    <a href="{{ url_for('static', filename=data.identity.cv_path) }}" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i> Open PDF in new tab
+                    </a>
+                </div>
+            </object>
+        </div>
+    </div>
+</div>

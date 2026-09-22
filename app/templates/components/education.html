@@ -1,0 +1,30 @@
+<!-- SECTION 03: Education -->
+<section id="education">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Education</span>
+            <h2 class="section-title">Academic <span class="gradient-text">Journey</span></h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline reveal delay-1">
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">{{ data.education.degree }}</h3>
+                    <div class="timeline-subtitle">{{ data.education.university }}</div>
+                    <div class="timeline-period"><i class="far fa-calendar-alt"></i> {{ data.education.period }} | <i class="fas fa-check-circle" style="color: var(--accent-color);"></i> {{ data.education.status }}</div>
+                    
+                    <div class="thesis-highlight">
+                        <h4>Undergraduate Thesis & Academic Focus:</h4>
+                        <ul class="timeline-details">
+                            {% for focus in data.education.focus %}
+                            <li>{{ focus }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
