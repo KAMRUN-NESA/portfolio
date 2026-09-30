@@ -28,6 +28,9 @@
                     <button class="btn btn-primary" onclick="openCvViewer()">
                         <i class="fas fa-file-alt"></i> View Resume
                     </button>
+                    <a href="{{ url_for('static', filename=data.identity.cv_path) }}" download="Kamrun_Nesa_CV.pdf" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
                     <a href="#research" class="btn btn-secondary">
                         <i class="fas fa-microscope"></i> Explore Research
                     </a>

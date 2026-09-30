@@ -14,7 +14,7 @@ portfolio_data = {
             "github": "https://github.com/KAMRUN-NESA",
             "linkedin": "https://www.linkedin.com/in/kamrun-nesa-363a9524b/",
             "researchgate": "https://www.researchgate.net/profile/Kamrun-Nesa",
-            "orcid": "https://orcid.org/0009-0000-2461-4697"
+            "orcid": "https://orcid.org/0009-0001-5212-7076"
         }
     },
     

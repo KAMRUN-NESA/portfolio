@@ -5,8 +5,11 @@
         <div class="cv-modal-header">
             <h3><i class="fas fa-file-pdf" style="color: #ef4444;"></i> Kamrun Nesa — Resume</h3>
             <div class="cv-modal-actions">
-                <a href="{{ url_for('static', filename=data.identity.cv_path) }}" download class="btn btn-primary btn-sm">
-                    <i class="fas fa-download"></i> Download
+                <a href="{{ url_for('static', filename=data.identity.cv_path) }}" download="Kamrun_Nesa_CV.pdf" class="btn btn-primary btn-sm">
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+                <a href="{{ url_for('static', filename=data.identity.cv_path) }}" target="_blank" class="btn btn-secondary btn-sm">
+                    <i class="fas fa-external-link-alt"></i> Open in Tab
                 </a>
                 <button class="cv-modal-close" onclick="closeCvViewer()" aria-label="Close modal">
                     <i class="fas fa-times"></i>
@@ -15,13 +18,19 @@
         </div>
         <div class="cv-modal-body">
             <!-- PDF Viewer object -->
-            <object data="{{ url_for('static', filename=data.identity.cv_path) }}#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="100%">
+            <object data="{{ url_for('static', filename=data.identity.cv_path) }}#toolbar=1&navpanes=0&scrollbar=1" type="application/pdf" width="100%" height="100%">
                 <!-- Fallback if PDF plugin isn't supported -->
                 <div class="pdf-fallback">
-                    <p>It appears your browser doesn't support embedded PDFs.</p>
-                    <a href="{{ url_for('static', filename=data.identity.cv_path) }}" target="_blank" class="btn btn-primary">
-                        <i class="fas fa-external-link-alt"></i> Open PDF in new tab
-                    </a>
+                    <i class="fas fa-file-pdf" style="font-size: 3rem; color: #ef4444; margin-bottom: 1rem;"></i>
+                    <p>PDF preview not supported in this browser.</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="{{ url_for('static', filename=data.identity.cv_path) }}" download="Kamrun_Nesa_CV.pdf" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                        <a href="{{ url_for('static', filename=data.identity.cv_path) }}" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-external-link-alt"></i> Open PDF
+                        </a>
+                    </div>
                 </div>
             </object>
         </div>
