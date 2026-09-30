@@ -9,12 +9,12 @@ portfolio_data = {
         "tags": ["AI/ML Research", "Graph Learning", "Intelligent Systems", "Software Engineering"],
         "location": "Chattogram, Bangladesh",
         "email": "nesakamrun490@gmail.com",
-        "cv_path": "images/cv/Kamrun_Nesa_CV for all pdf.pdf",
+        "cv_path": "images/cv/Kamrun_Nesa_CV.pdf",
         "social": {
             "github": "https://github.com/KAMRUN-NESA",
             "linkedin": "https://www.linkedin.com/in/kamrun-nesa-363a9524b/",
             "researchgate": "https://www.researchgate.net/profile/Kamrun-Nesa",
-            "orcid": "https://orcid.org/my-orcid"
+            "orcid": "https://orcid.org/0009-0000-2461-4697"
         }
     },
     
@@ -51,7 +51,8 @@ portfolio_data = {
             "title": "A Leakage-Aware Two-Stage XGBoost Framework for Early Detection and Clinical Staging of Chronic Kidney Disease",
             "date": "April 2026",
             "venue": "2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence & Networking (QPAIN)",
-            "area": "Medical Image Analysis / Machine Learning",
+            "area": "Medical Data Analytics / Machine Learning",
+            "authors": "Kamrun Nesa et al.",
             "doi": "10.1109/QPAIN69676.2026.11545518",
             "link": "https://doi.org/10.1109/QPAIN69676.2026.11545518"
         },
@@ -60,6 +61,7 @@ portfolio_data = {
             "date": "April 2026",
             "venue": "2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence & Networking (QPAIN)",
             "area": "Computer Vision / Deep Learning",
+            "authors": "Kamrun Nesa et al.",
             "doi": "10.1109/QPAIN69676.2026.11545733",
             "link": "https://doi.org/10.1109/QPAIN69676.2026.11545733"
         },
@@ -68,6 +70,7 @@ portfolio_data = {
             "date": "February 2025",
             "venue": "2025 International Conference on Electrical, Computer and Communication Engineering (ECCE)",
             "area": "Machine Learning / Data Analytics",
+            "authors": "Kamrun Nesa et al.",
             "doi": "10.1109/ECCE64574.2025.11013297",
             "link": "https://doi.org/10.1109/ECCE64574.2025.11013297"
         }
@@ -79,7 +82,13 @@ portfolio_data = {
             "company": "Diligite",
             "date": "June 2026 – July 2026",
             "location": "Dhaka, Bangladesh",
-            "description": "Completed a software engineering internship in a professional development environment based in Dhaka, Bangladesh, strengthening applied programming and collaborative development skills."
+            "description": "Completed a software engineering internship at Diligite, a professional software firm in Dhaka.",
+            "responsibilities": [
+                "Contributed to backend API development using Python and REST frameworks",
+                "Collaborated in an Agile team environment with code reviews and version control (Git/GitHub)",
+                "Participated in software design discussions and system documentation",
+                "Strengthened applied programming and collaborative development skills in a production environment"
+            ]
         },
         {
             "role": "Teaching Assistant",
@@ -121,23 +130,65 @@ portfolio_data = {
     },
 
     "projects": [
-        {"name": "CareerMatch AI", "description": "[Placeholder description]", "tech": ["AI/ML", "Python"], "github": "https://github.com/KAMRUN-NESA", "demo": "#"},
-        {"name": "Customer Retention Prediction", "description": "[Placeholder description]", "tech": ["Machine Learning"], "github": "https://github.com/KAMRUN-NESA", "demo": "#"},
-        {"name": "EDUPORT", "description": "[Placeholder description]", "tech": ["Web Development"], "github": "https://github.com/KAMRUN-NESA", "demo": "#"},
-        {"name": "CHATT-APPS", "description": "Real-time chat applications", "tech": ["Web", "API"], "github": "https://github.com/KAMRUN-NESA", "demo": "#"},
-        {"name": "Tic-Tac-Toe", "description": "[Placeholder description]", "tech": ["Programming"], "github": "https://github.com/KAMRUN-NESA", "demo": "#"},
-        {"name": "HMS Project", "description": "Hospital Management System", "tech": ["Web Development", "PHP", "MySQL"], "github": "https://github.com/KAMRUN-NESA", "demo": "#"},
-        {"name": "Travell", "description": "[Placeholder description]", "tech": ["Web Development"], "github": "https://github.com/KAMRUN-NESA", "demo": "#"},
-        {"name": "Portfolio", "description": "Personal research portfolio", "tech": ["HTML", "CSS", "JavaScript", "Python"], "github": "https://github.com/KAMRUN-NESA", "demo": "#"}
+        {
+            "name": "CareerMatch AI",
+            "description": "Resume parser and job matching platform using NLP to analyze candidate profiles and suggest career paths based on skills, experience, and market demand.",
+            "tech": ["Python", "NLP", "Machine Learning", "Flask"],
+            "github": "https://github.com/KAMRUN-NESA/CareerMatch-AI",
+            "demo": "#"
+        },
+        {
+            "name": "CKD Detection — XGBoost Framework",
+            "description": "Leakage-aware two-stage XGBoost framework for early detection and clinical staging of Chronic Kidney Disease. Published at IEEE QPAIN 2026. Achieved high precision with robust preprocessing pipeline.",
+            "tech": ["Python", "XGBoost", "Scikit-learn", "Medical ML"],
+            "github": "https://github.com/KAMRUN-NESA",
+            "demo": "https://doi.org/10.1109/QPAIN69676.2026.11545518"
+        },
+        {
+            "name": "Customer Retention Prediction",
+            "description": "End-to-end predictive analytics pipeline using ensemble classifiers (XGBoost, Random Forest) to identify at-risk customers. Includes EDA, feature engineering, SHAP-based feature importance analysis, and model evaluation.",
+            "tech": ["Python", "XGBoost", "Pandas", "SHAP", "Scikit-learn"],
+            "github": "https://github.com/KAMRUN-NESA/Customer-Retention-Prediction",
+            "demo": "#"
+        },
+        {
+            "name": "EDUPORT",
+            "description": "Full-stack e-learning platform with course catalog, quiz system, student enrollment, and performance analytics. Built with Laravel/PHP and MySQL.",
+            "tech": ["Laravel", "PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+            "github": "https://github.com/KAMRUN-NESA/EDUPORT",
+            "demo": "#"
+        },
+        {
+            "name": "Facial Emotion Recognition",
+            "description": "Robust ensemble-based framework for facial emotion recognition using transfer learning (VGG, ResNet) and test-time augmentation. Published at IEEE QPAIN 2026.",
+            "tech": ["PyTorch", "Transfer Learning", "CNN", "Computer Vision"],
+            "github": "https://github.com/KAMRUN-NESA",
+            "demo": "https://doi.org/10.1109/QPAIN69676.2026.11545733"
+        },
+        {
+            "name": "Portfolio Website",
+            "description": "Personal AI/ML research portfolio built with Flask and vanilla JS. Features dynamic animations, dark mode, and auto-deployment via GitHub Actions.",
+            "tech": ["Python", "Flask", "HTML", "CSS", "JavaScript"],
+            "github": "https://github.com/KAMRUN-NESA/portfolio_bundle",
+            "demo": "#"
+        }
     ],
+    "more_projects_link": "https://github.com/KAMRUN-NESA?tab=repositories",
 
     "cp": [
-        {"platform": "Codeforces", "icon": "fas fa-code", "rating": "[Placeholder Rating]"},
-        {"platform": "CodeChef", "icon": "fas fa-utensils", "rating": "[Placeholder Rating]"},
-        {"platform": "LeetCode", "icon": "fas fa-laptop-code", "rating": "[Placeholder Rating]"}
+        {"platform": "Codeforces", "icon": "fas fa-code", "status": "Active Participant", "link": "https://codeforces.com/"},
+        {"platform": "CodeChef", "icon": "fas fa-utensils", "status": "Active Participant", "link": "https://www.codechef.com/"},
+        {"platform": "LeetCode", "icon": "fas fa-laptop-code", "status": "Active Participant", "link": "https://leetcode.com/"}
     ],
 
     "contact": {
-        "text": "Open to MSc/PhD research opportunities, AI/ML research collaboration, AI/ML projects, software engineering opportunities, data/AI projects, and academic collaboration."
+        "text": "Open to MSc/PhD research opportunities, AI/ML research collaboration, AI/ML projects, software engineering opportunities, data/AI projects, and academic collaboration.",
+        "research_interests": [
+            "Graph Neural Networks & Hypergraph Learning",
+            "Class-Imbalanced Learning & Explainable AI",
+            "Medical/Healthcare AI & Computer Vision",
+            "Deep Learning for structured/tabular data"
+        ],
+        "lab_types": "AI/ML labs working on graph learning, healthcare AI, computer vision, or intelligent systems."
     }
 }

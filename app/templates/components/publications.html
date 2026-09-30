@@ -15,6 +15,7 @@
                 </div>
                 <div class="card-body">
                     <h3 class="card-title">{{ pub.title }}</h3>
+                    <p class="card-description" style="margin-bottom: 0.5rem;"><strong>Authors:</strong> {{ pub.authors }}</p>
                     <p class="card-description"><strong>Venue:</strong> {{ pub.venue }} ({{ pub.date }})</p>
                     <p class="card-description" style="margin-bottom: 0.5rem;"><strong>Area:</strong> {{ pub.area }}</p>
                     <p class="card-description"><strong>DOI:</strong> <a href="{{ pub.link }}" target="_blank">{{ pub.doi }}</a></p>

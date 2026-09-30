@@ -18,6 +18,25 @@
                 <h3>Open for Collaboration</h3>
                 <p>{{ data.contact.text }}</p>
                 
+                {% if data.contact.research_interests %}
+                <div style="margin-top: 1.5rem;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.75rem;"><i class="fas fa-flask"></i> Research Areas of Interest</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        {% for interest in data.contact.research_interests %}
+                        <li style="padding: 0.4rem 0; color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-chevron-right" style="color: var(--primary-color); font-size: 0.75rem;"></i> {{ interest }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                {% if data.contact.lab_types %}
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted); font-style: italic;">
+                    <i class="fas fa-university"></i> Ideal fit: {{ data.contact.lab_types }}
+                </p>
+                {% endif %}
+                
                 <div class="contact-methods">
                     <div class="contact-method">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>

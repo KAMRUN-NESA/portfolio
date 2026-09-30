@@ -13,7 +13,10 @@
                 <div class="card-body" style="text-align: center; padding-top: 2rem;">
                     <i class="{{ platform.icon }} card-icon" style="font-size: 3rem; margin-bottom: 1rem;"></i>
                     <h3 class="card-title">{{ platform.platform }}</h3>
-                    <p class="card-description">{{ platform.rating }}</p>
+                    <p class="card-description" style="margin-bottom: 1rem;">{{ platform.status }}</p>
+                    <a href="{{ platform.link }}" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 1rem;">
+                        <i class="fas fa-external-link-alt"></i> Visit Profile
+                    </a>
                 </div>
             </div>
             {% endfor %}
